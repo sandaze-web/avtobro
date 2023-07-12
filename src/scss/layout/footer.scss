@@ -1,0 +1,114 @@
+.footer {
+  padding-top: 69px;
+  &-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 97px;
+  }
+  &__button {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 158px;
+    background: $--accent-color-main;
+    padding: 13px 0;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    @include font-ubuntuB;
+  }
+  &-paymentBx {
+    &__title {
+      font-size: rem(24);
+      @include font-ubuntuL;
+    }
+  }
+  &-cards {
+    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    & img {
+      @include notLast {
+        margin-right: 60px;
+      }
+    }
+  }
+  &-bottom {
+    background: #E2E7F0;
+    padding: 23px 0;
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &-docs {
+    text-decoration: underline;
+    @include font-robotoL;
+    &__item {
+      font-size: rem(24);
+      @include notLast {
+        margin-right: 40px;
+      }
+    }
+  }
+  &__copyright {
+    font-size: rem(24);
+    @include font-robotoL;
+  }
+  @include media(768) {
+    padding-top: 60px;
+    &-inner {
+      flex-direction: column;
+    }
+    &-logoBx {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    &-paymentBx {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 30px;
+      width: 100%;
+    }
+    &-cards {
+      padding-top: 20px;
+    }
+    &-appsBx {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 30px;
+    }
+    &-bottom {
+      &-inner {
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &-docs {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      &__item {
+        font-size: rem(20);
+        @include notLast {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__copyright {
+      margin-top: 10px;
+      font-size: rem(20);
+    }
+  }
+}

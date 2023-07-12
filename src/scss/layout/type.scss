@@ -1,0 +1,67 @@
+.type {
+  background: $--accent-color-main;
+  padding: 23px 0;
+  &-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__item {
+      padding: 18px 0px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: rem(18);
+      @include font-ubuntuB;
+      transition: .4s;
+      position: relative;
+      cursor: pointer;
+      white-space: nowrap;
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        left: 50%;
+        top: 0;
+        width: calc(100% + 48px);
+        height: 100%;
+        border-radius: 30px;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.15);
+        opacity: 0;
+        transition: .4s;
+      }
+      &.active {
+        &:after {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+
+  @include media(1500) {
+    &-panel {
+      overflow-x: auto;
+      margin-bottom: -10px;
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $--accent-color-main;
+      }
+      &__item {
+        @include notLast {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+}

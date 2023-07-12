@@ -1,0 +1,86 @@
+// =====================================================================================================================
+.header {
+  &.sticky {
+    // ..стили для липкого хедера
+  }
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  padding-top: 40px;
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-box {
+    align-items: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__phone {
+    display: flex;
+    align-items: center;
+    font-size: rem(22);
+    @include font-robotoM;
+    & span {
+      color: #fff;
+      &:last-child {
+        margin-left: 13px;
+      }
+    }
+    & svg {
+      margin-top: 4px;
+    }
+  }
+  &__button {
+    margin-left: 55px;
+    width: 100%;
+    max-width: 212px;
+    padding: 17px 0;
+    background-color: $--accent-color-main;
+    color: #fff;
+    border-radius: 40.253px;
+    font-size: rem(18);
+    @include font-ubuntuB;
+    text-transform: uppercase;
+  }
+
+  @include media(768) {
+    padding-top: 20px;
+    &-logoBx {
+      max-width: 200px;
+      & img {
+        width: 100%;
+      }
+    }
+    &__phone {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background-color: rgba(#000, .4);
+      & span {
+        &:last-child {
+          display: none;
+        }
+        &:first-child {
+          & svg {
+            max-width: 18px;
+          }
+        }
+      }
+    }
+    &__button {
+      margin-left: 10px;
+      max-width: 120px;
+      padding: 12px 0;
+      font-size: rem(16);
+    }
+  }
+}
+// =====================================================================================================================

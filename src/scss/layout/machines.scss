@@ -1,0 +1,135 @@
+.machines {
+  padding-top: 47px;
+  position: relative;
+  z-index: 3;
+  &-box {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(435px, 1fr));
+    grid-gap: 66px;
+  }
+  &-item {
+    border: 2px solid #E0E5ED;
+    &.hidden {
+      display: none;
+    }
+    &-wrapper {
+      background: #E0E5ED;
+      padding: 20px 20px 35px;
+    }
+    &__stars {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      & span {
+        color: $--accent-color-main;
+        & i {
+          color: $--accent-color-main;
+        }
+        &:last-child {
+          font-size: rem(28);
+          @include font-ubuntuR;
+        }
+      }
+    }
+    &__imgBx {
+      & img {
+        width: 100%;
+      }
+    }
+    &-main {
+      padding: 20px;
+      padding-top: 30px;
+    }
+    &__title {
+      font-size: rem(33);
+      @include font-ubuntuB;
+    }
+    &__subtitle {
+      margin-top: 16px;
+      @include font-ubuntuL;
+      font-size: rem(28);
+    }
+    &-box {
+      padding-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-price {
+      & p {
+        &:first-child {
+          font-size: rem(45);
+        }
+        &:last-child {
+          margin-top: 11px;
+          font-size: rem(28);
+          color: $--accent-color-main;
+        }
+      }
+    }
+    &-basket {
+      width: 81px;
+      height: 81px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: $--accent-color-main;
+      transition: .4s;
+      & svg path {
+        transition: .4s;
+      }
+      &:hover {
+        background: $--hover-color;
+        & svg path {
+          stroke: $--accent-color-main;
+        }
+      }
+    }
+  }
+  &-buttonBx {
+    padding-top: 56px;
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    width: 100%;
+    max-width: 212px;
+    padding: 17px 0;
+    background-color: $--accent-color-main;
+    border-radius: 40.253px;
+    color: #fff;
+    text-transform: uppercase;
+    @include font-ubuntuB;
+    font-size: rem(18);
+  }
+  @include media(768) {
+    &-box {
+      grid-gap: 33px;
+    }
+    &-item {
+      &__imgBx {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & img {
+          width: 76%;
+        }
+      }
+      &-box {
+        padding-top: 30px;
+      }
+      &-price {
+        & p {
+          &:first-child {
+            font-size: rem(35);
+          }
+          &:last-child {
+            font-size: rem(24);
+          }
+        }
+      }
+    }
+  }
+}

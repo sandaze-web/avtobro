@@ -1,0 +1,76 @@
+.about {
+  margin-top: 56px;
+  padding: 96px 0;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #F1F4FA;
+    width: 65%;
+    z-index: -1;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-25%, -25%);
+    width: 655px;
+    height: 655px;
+    background-color: #fff;
+    opacity: .6;
+    border-radius: 50%;
+  }
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-main {
+    margin-right: 100px;
+    position: relative;
+    z-index: 3;
+  }
+  &__subtitle {
+    margin-top: 61px;
+    font-size: rem(32);
+    line-height: 40px;
+    max-width: 614px;
+    @include font-ubuntuL;
+  }
+  &-imgBx {
+    position: relative;
+    z-index: 3;
+  }
+  @include media(1080) {
+    &-imgBx {
+      max-width: 600px;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+  @include media(768) {
+    padding-top: 60px;
+    overflow: hidden;
+    &-inner {
+      flex-direction: column;
+    }
+    &-main {
+      margin-right: 0;
+    }
+    &__subtitle {
+      font-size: rem(28);
+      margin-top: 30px;
+    }
+    &-imgBx {
+      margin-top: 20px;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
