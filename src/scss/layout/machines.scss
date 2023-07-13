@@ -2,6 +2,35 @@
   padding-top: 47px;
   position: relative;
   z-index: 3;
+  &-calendarBx {
+    display: flex;
+    align-items: center;
+    margin-bottom: 47px;
+  }
+  &-calendar {
+    flex-grow: 1;
+    margin-right: 12px;
+    padding: 14px 20px;
+    border: 1px solid #DAE0EB;
+    display: flex;
+    align-items: center;
+    &__info {
+      margin-left: 14px;
+      font-size: rem(23);
+      @include font-ubuntuL;
+    }
+  }
+  &-filters {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    &__text {
+      color: $--accent-color-main;
+      font-size: rem(24);
+      @include font-ubuntuL;
+      margin-left: 10px;
+    }
+  }
   &-box {
     padding-top: 50px;
     display: grid;
@@ -130,6 +159,30 @@
           }
         }
       }
+    }
+  }
+  @include media(600) {
+    &-calendarBx {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    &-calendar {
+      width: 100%;
+      margin-right: 0;
+      &__info {
+        font-size: rem(20);
+      }
+    }
+    &-filters {
+      margin-top: 10px;
+      &__text {
+        font-size: rem(20);
+      }
+    }
+  }
+  @include media(480) {
+    &-box {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

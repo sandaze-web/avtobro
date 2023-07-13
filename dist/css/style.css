@@ -652,6 +652,35 @@ body {
   position: relative;
   z-index: 3;
 }
+.machines-calendarBx {
+  display: flex;
+  align-items: center;
+  margin-bottom: 47px;
+}
+.machines-calendar {
+  flex-grow: 1;
+  margin-right: 12px;
+  padding: 14px 20px;
+  border: 1px solid #DAE0EB;
+  display: flex;
+  align-items: center;
+}
+.machines-calendar__info {
+  margin-left: 14px;
+  font-size: 1.4375rem;
+  font-family: "Ubuntu-Light", sans-serif;
+}
+.machines-filters {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.machines-filters__text {
+  color: #457DB8;
+  font-size: 1.5rem;
+  font-family: "Ubuntu-Light", sans-serif;
+  margin-left: 10px;
+}
 .machines-box {
   padding-top: 50px;
   display: grid;
@@ -768,6 +797,30 @@ body {
   }
   .machines-item-price p:last-child {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .machines-calendarBx {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .machines-calendar {
+    width: 100%;
+    margin-right: 0;
+  }
+  .machines-calendar__info {
+    font-size: 1.25rem;
+  }
+  .machines-filters {
+    margin-top: 10px;
+  }
+  .machines-filters__text {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .machines-box {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
