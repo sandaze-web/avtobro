@@ -34,7 +34,7 @@
   &-box {
     padding-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(435px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(435px, 1fr));
     grid-gap: 66px;
   }
   &-item {
@@ -190,7 +190,7 @@
       }
     }
   }
-  @include media(480) {
+  @include media(560) {
     &-box {
       grid-template-columns: repeat(1, 1fr);
     }
