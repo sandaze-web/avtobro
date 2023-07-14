@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
           spaceBetween: 40,
           // Responsive breakpoints
           navigation: {
-              nextEl: '.cities__arrow',
+              nextEl: '.cities__arrow.next',
+              prevEl: '.cities__arrow.prev',
           },
           breakpoints: {
               // when window width is >= 320px
@@ -24,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
               769: {
                   slidesPerView: 2.8,
                   spaceBetween: 40
+              },
+              820: {
+                  slidesPerView: 2.1,
+                  spaceBetween: 20
               },
               1080: {
                   slidesPerView: 2.3,

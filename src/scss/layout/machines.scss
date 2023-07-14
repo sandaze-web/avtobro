@@ -39,6 +39,10 @@
   }
   &-item {
     border: 2px solid #E0E5ED;
+    transition: .4s;
+    &:hover {
+      box-shadow: 0 0px 13px 0px #595656;
+    }
     &.hidden {
       display: none;
     }
@@ -132,6 +136,12 @@
     text-transform: uppercase;
     @include font-ubuntuB;
     font-size: rem(18);
+  }
+  @include media(820) {
+    &-box {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
   }
   @include media(768) {
     &-box {

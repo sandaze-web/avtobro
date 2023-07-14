@@ -102,4 +102,10 @@
       display: none;
     }
   }
+  &__arrow {
+    &.prev {
+      transform: scale(-1, 1);
+      margin-right: 40px;
+    }
+  }
 }

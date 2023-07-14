@@ -56,7 +56,7 @@
     font-size: rem(24);
     @include font-robotoL;
   }
-  @include media(768) {
+  @include media(820) {
     padding-top: 60px;
     &-inner {
       flex-direction: column;

@@ -48,6 +48,24 @@
     text-transform: uppercase;
   }
 
+  @include media(820) {
+    &-logoBx {
+      max-width: 200px;
+      & img {
+        width: 100%;
+      }
+    }
+    &__phone {
+      & span {
+        &:last-child {
+          font-size: rem(20);
+        }
+      }
+    }
+    &__button {
+      max-width: 200px;
+    }
+  }
   @include media(768) {
     padding-top: 20px;
     &-logoBx {
